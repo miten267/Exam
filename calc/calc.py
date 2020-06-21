@@ -11,8 +11,8 @@ def application(environ, start_response):
 		sum = first_num + second_num
 		mul = first_num * second_num
 	except ValueError:
-		sum = -1
-		mul = -1
+		sum = 'Please Write A Number'
+		mul = 'Please Write A Number'
 	response_body = html % {'sum':sum, 'mul':mul}
 	start_response('200 OK', [
 		('Content-Type', 'text/html'),
